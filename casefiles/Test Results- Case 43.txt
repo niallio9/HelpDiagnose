@@ -1,0 +1,27 @@
+From: Back Pain Diagnosis <noreply@monkeywrenchplayground.eu>
+To: awanryan2014@gmail.com <awanryan2014@gmail.com>
+Date: Sat, 22 Mar 2014 19:07:35 -0500
+Subject: Test Results: Case 43
+
+Name: Case 43
+Age: 15
+
+You exhibit 3 symptom(s) for flexion and 1 symptom(s) for extension
+
+You present both flexion and extension biased symtoms.
+Considering your age, 15, it is not likely that you have a mixed pattern back pain.
+Please visit Raz
+
+
+********************** Detailed Summary ***********************
+
+Aggravating Activites:
+lifting -> mixed
+bending forward -> flexion
+
+Alleviating Activites:
+walking a short distance -> flexion
+
+Comparison of Activities:
+
+************************************************************************

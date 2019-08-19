@@ -26,7 +26,7 @@ if nargin < 1
 end
 fileout = sprintf('%s.txt', output_file);
 if nargin < 2
-    model_type = 'forest';
+    model_type = 'bayes';
 elseif ~strcmp(model_type, 'bayes') && ~strcmp(model_type, 'forest') && ~strcmp(model_type, 'old_school')
     error('Invalid model type. Please choose either ''bayes'', ''forest'', or ''old_school''')
 end
@@ -38,8 +38,15 @@ load('Alleviating_symptoms.mat'); %Load the information about the activities giv
 load('Comparison_symptoms.mat'); %Load the information about the activities given by Dr. Awan: (comparison)
 %load('Warnings.mat'); % Load the information about the warning signs given by Dr. Awan (warning)
 
-[ans_aggravate, ans_alleviate, ans_comparison, age ] = get_symptoms_gui( aggravating, alleviating, comparison); %#ok<NODEF>
-[ans_warning] = warning_signs_gui();
+%% Run the user interfaces
+[ans_aggravate, ans_alleviate, ans_comparison, age, canceled ] = get_symptoms_gui( aggravating, alleviating, comparison); %#ok<NODEF>
+if canceled == 1
+    return
+end
+[ans_warning, canceled] = warning_signs_gui();
+if canceled == 1
+    return
+end
 
 %% clean and count the data
 ans_aggravate = ans_aggravate(2:end);

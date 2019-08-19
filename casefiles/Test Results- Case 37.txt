@@ -1,0 +1,37 @@
+From: Back Pain Diagnosis <noreply@monkeywrenchplayground.eu>
+To: awanryan2014@gmail.com <awanryan2014@gmail.com>
+Date: Sat, 22 Mar 2014 19:22:00 -0500
+Subject: Test Results: Case 37
+
+Name: Case 37
+Age: 45
+
+You exhibit 12 symptom(s) for flexion and 3 symptom(s) for extension
+
+It is highly probable that you have a flexion biased back problem.
+
+In addition, you indicated that coughing causes aggravation.
+--> This is strongly correlated with FLEXION biased injuries.
+
+
+********************** Detailed Summary ***********************
+
+Aggravating Activites:
+sitting/driving -> flexion
+standing -> mixed
+lifting -> mixed
+bending forward -> flexion
+in the morning -> mixed
+coughing/sneezing -> flexion
+rotating/twisting -> flexion
+prolonged walking only -> flexion
+
+Alleviating Activites:
+walking a short distance -> flexion
+
+Comparison of Activities:
+sitting causes more pain than standing -> flexion
+standing causes more pain than walking -> flexion
+sitting causes more pain than walking -> flexion
+
+************************************************************************

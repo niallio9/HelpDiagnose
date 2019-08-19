@@ -1,4 +1,10 @@
-function [ ans_aggravate, ans_alleviate, ans_comparison, age ] = get_symptoms_gui( aggravating, alleviating, comparison )
+function [ ans_aggravate, ans_alleviate, ans_comparison, age, canceled ] = get_symptoms_gui( aggravating, alleviating, comparison )
+
+%% initialise
+ans_aggravate = [];
+ans_alleviate = [];
+ans_comparison = [];
+age = [];
 
 %% some dialogue box options
 options.Resize = 'on';
@@ -16,13 +22,14 @@ x = 1;
 while x == 1
     [age, canceled] = inputsdlg('Please enter your age:', [], [], [], options);
     age = str2double(age{1});
-    if isempty(age) == 1 || isnumeric(age) == 0 || isnan(age)
-        waitfor(errordlg('You must enter an age to continue', 'Invalid entry'));
-    elseif canceled == 1
+    if canceled == 1
         disp('session ended by user')
         out = datetime('now');
         disp(out)
         return
+    elseif isempty(age) == 1 || isnumeric(age) == 0 || isnan(age)
+        waitfor(errordlg('You must enter an age to continue', 'Invalid entry'));
+        
     else
         x = 0;
     end

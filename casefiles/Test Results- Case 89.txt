@@ -1,0 +1,32 @@
+From: Back Pain Diagnosis <noreply@monkeywrenchplayground.eu>
+To: awanryan2014@gmail.com <awanryan2014@gmail.com>
+Date: Thu, 20 Mar 2014 21:02:37 -0500
+Subject: Test Results: Case 89
+
+Name: Case 89
+Age: 53
+
+You exhibit 9 symptom(s) for flexion and 3 symptom(s) for extension
+
+It is highly probable that you have a flexion biased back problem.
+
+
+********************** Detailed Summary ***********************
+
+Aggravating Activites:
+sitting/driving -> flexion
+lifting -> mixed
+bending forward -> flexion
+bending backward -> extension
+in the morning -> mixed
+rotating/twisting -> flexion
+getting up from sitting -> flexion
+
+Alleviating Activites:
+walking a short distance -> flexion
+
+Comparison of Activities:
+sitting causes more pain than standing -> flexion
+sitting causes more pain than walking -> flexion
+
+************************************************************************

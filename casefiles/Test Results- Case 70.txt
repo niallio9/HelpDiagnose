@@ -1,0 +1,32 @@
+From: Back Pain Diagnosis <noreply@monkeywrenchplayground.eu>
+To: awanryan2014@gmail.com <awanryan2014@gmail.com>
+Date: Sat, 22 Mar 2014 15:59:46 -0500
+Subject: Test Results: Case 70
+
+Name: Case 70
+Age: 88
+
+You exhibit 6 symptom(s) for flexion and 4 symptom(s) for extension
+
+You present both flexion and extension biased symtoms.
+Considering your age, 88, you may have a mixed pattern back pain.
+Please visit Raz
+
+
+********************** Detailed Summary ***********************
+
+Aggravating Activites:
+sitting/driving -> flexion
+standing -> mixed
+lifting -> mixed
+bending forward -> flexion
+in the morning -> mixed
+walking (at all) -> extension
+getting up from sitting -> flexion
+
+Alleviating Activites:
+None
+
+Comparison of Activities:
+
+************************************************************************

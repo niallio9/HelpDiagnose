@@ -1,0 +1,33 @@
+From: Back Pain Diagnosis <noreply@monkeywrenchplayground.eu>
+To: awanryan2014@gmail.com <awanryan2014@gmail.com>
+Date: Thu, 20 Mar 2014 00:49:38 -0500
+Subject: Test Results: Case 4
+
+Name: Case 4
+Age: 65
+
+You exhibit 4 symptom(s) for flexion and 2 symptom(s) for extension
+
+You present both flexion and extension biased symtoms.
+Considering your age, 65, you may have a mixed pattern back pain.
+Please visit Raz
+
+
+VERY IMPORTANT: You answered that your symptoms come on sooner if you walk faster.
+This could be indicative of a vascular condition/issue with blood supply.
+
+********************** Detailed Summary ***********************
+
+Aggravating Activites:
+sitting/driving -> flexion
+prolonged walking only -> flexion
+getting up from sitting -> flexion
+
+Alleviating Activites:
+walking a short distance -> flexion
+bending forward -> extension
+
+Comparison of Activities:
+walking causes more pain than sitting -> extension
+
+************************************************************************

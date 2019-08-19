@@ -1,0 +1,28 @@
+From: Back Pain Diagnosis <noreply@monkeywrenchplayground.eu>
+To: awanryan2014@gmail.com <awanryan2014@gmail.com>
+Date: Sat, 22 Mar 2014 19:18:41 -0500
+Subject: Test Results: Case 38
+
+Name: Case 38
+Age: 82
+
+You exhibit 1 symptom(s) for flexion and 6 symptom(s) for extension
+
+It is highly probable that you have an extension biased back problem.
+
+
+********************** Detailed Summary ***********************
+
+Aggravating Activites:
+standing -> mixed
+walking (at all) -> extension
+
+Alleviating Activites:
+sitting -> extension
+
+Comparison of Activities:
+standing causes more pain than sitting -> extension
+walking causes more pain than sitting -> extension
+You can cycle for a longer time than you can walk -> extension
+
+************************************************************************

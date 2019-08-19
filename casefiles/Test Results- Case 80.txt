@@ -1,0 +1,35 @@
+From: Back Pain Diagnosis <noreply@monkeywrenchplayground.eu>
+To: awanryan2014@gmail.com <awanryan2014@gmail.com>
+Date: Thu, 20 Mar 2014 21:32:09 -0500
+Subject: Test Results: Case 80
+
+Name: Case 80
+Age: 54
+
+You exhibit 5 symptom(s) for flexion and 8 symptom(s) for extension
+
+Your symptoms are suggestive of an extension biased back problem.
+
+IMPORTANT: You indicated that using a shopping cart alleviates pain.
+--> This is strongly correlated with EXTENSION biased injuries.
+
+
+********************** Detailed Summary ***********************
+
+Aggravating Activites:
+standing -> mixed
+lifting -> mixed
+bending forward -> flexion
+bending backward -> extension
+in the morning -> mixed
+rotating/twisting -> flexion
+walking (at all) -> extension
+
+Alleviating Activites:
+using a grocery cart -> extension
+
+Comparison of Activities:
+standing causes more pain than sitting -> extension
+walking causes more pain than sitting -> extension
+
+************************************************************************

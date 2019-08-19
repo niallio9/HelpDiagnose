@@ -1,0 +1,38 @@
+From: Back Pain Diagnosis <noreply@monkeywrenchplayground.eu>
+To: awanryan2014@gmail.com <awanryan2014@gmail.com>
+Date: Sun, 23 Mar 2014 13:07:33 -0500
+Subject: Test Results: Case 19
+
+Name: Case 19
+Age: 68
+
+You exhibit 3 symptom(s) for flexion and 9 symptom(s) for extension
+
+It is highly probable that you have an extension biased back problem.
+
+In addition, you indicated that coughing causes aggravation.
+--> This is strongly correlated with FLEXION biased injuries.
+
+IMPORTANT: You indicated that using a shopping cart alleviates pain.
+--> This is strongly correlated with EXTENSION biased injuries.
+
+
+********************** Detailed Summary ***********************
+
+Aggravating Activites:
+lifting -> mixed
+bending backward -> extension
+in the morning -> mixed
+coughing/sneezing -> flexion
+walking (at all) -> extension
+
+Alleviating Activites:
+sitting -> extension
+bending forward -> extension
+using a grocery cart -> extension
+
+Comparison of Activities:
+walking causes more pain than standing -> extension
+walking causes more pain than sitting -> extension
+
+************************************************************************

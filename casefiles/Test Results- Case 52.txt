@@ -1,0 +1,29 @@
+From: Back Pain Diagnosis <noreply@monkeywrenchplayground.eu>
+To: awanryan2014@gmail.com <awanryan2014@gmail.com>
+Date: Sat, 22 Mar 2014 17:48:25 -0500
+Subject: Test Results: Case 52
+
+Name: Case 52
+Age: 32
+
+You exhibit 6 symptom(s) for flexion and 3 symptom(s) for extension
+
+Your symptoms are suggestive of a flexion biased back problem.
+
+
+********************** Detailed Summary ***********************
+
+Aggravating Activites:
+sitting/driving -> flexion
+standing -> mixed
+lifting -> mixed
+bending forward -> flexion
+in the morning -> mixed
+prolonged walking only -> flexion
+
+Alleviating Activites:
+None
+
+Comparison of Activities:
+
+************************************************************************
