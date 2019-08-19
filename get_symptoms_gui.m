@@ -1,7 +1,32 @@
-function [ ans_aggravate, ans_alleviate, ans_comparison ] = ask_questions_gui( aggravating, alleviating, comparison, options, dlgformat )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+function [ ans_aggravate, ans_alleviate, ans_comparison, age ] = get_symptoms_gui( aggravating, alleviating, comparison )
 
+%% some dialogue box options
+options.Resize = 'on';
+options.WindowStyle = 'normal';
+options.Interpreter = 'tex';
+options.FontSize = 18;
+options.CancelButton = 'on';
+
+dlgformat.Interpreter = 'tex';
+dlgformat.Default = '';
+dlgformat.WindowStyle = 'non-modal';
+
+%% Identify the age of the patient
+x = 1;
+while x == 1
+    [age, canceled] = inputsdlg('Please enter your age:', [], [], [], options);
+    age = str2double(age{1});
+    if isempty(age) == 1 || isnumeric(age) == 0 || isnan(age)
+        waitfor(errordlg('You must enter an age to continue', 'Invalid entry'));
+    elseif canceled == 1
+        disp('session ended by user')
+        out = datetime('now');
+        disp(out)
+        return
+    else
+        x = 0;
+    end
+end
 
 %% Get answers to questions about causes of aggravation
 [ans_aggravate, canceled]  = inputsdlg(aggravating(:,1), [], aggravating(:,3),[], options); %open checkbox UI

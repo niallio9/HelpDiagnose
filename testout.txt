@@ -1,13 +1,38 @@
+
+	You exhibit 4 symptom(s) for flexion and 2 symptom(s) for extension.
+
+	You present both flexion and extension biased symptoms, suggesting a mixed-pattern back pain.
+	Considering your age, 33, it is not likely that you have a mixed pattern back pain.
+	Please visit Raz
+
+	VERY IMPORTANT: You answered that your symptoms come on sooner if you walk faster.
+	This could be indicative of a vascular condition/issue with blood supply
+
+	VERY IMPORTANT: You answered that you suffer ongoing Fevers/Night sweats/Chills/Unexplained weight loss.
+	Your pain may be symptomatic of a serious underlying condition
+
+	VERY IMPORTANT: You answered that your symptoms came on after a significant fall/trauma.
+	This could mean that you have a fractured or broken bone
+
+	VERY IMPORTANT: You answered that you have significant leakage of bladder/bowel function.
+	In the context of associated low back pain, this could indicate spinal cord compression
+
+	VERY IMPORTANT: You answered that you have a history of prior cancer.
+	You may require screening for possible cancer of the bones
+
+
+	***** See the file "testout.txt" for more detailed information on answered questions *****
+
 ******************************DETAILED INFORMATION********************************
 
-AGE: 5
+AGE: 33
 
 AGGRAVATING ACTIVITIES
-sitting/driving: flexion biased
-bending forward: flexion biased
+in the morning: mixed biased
+prolonged walking only: flexion biased
 
 ALLEVIATING ACTIVITIES
-using a grocery cart: extension biased
+lying down: mixed biased
 
 COMPARISON OF ACTIVITIES
-walking casues more pain than standing: extension biased
+standing causes more pain than walking: flexion biased
