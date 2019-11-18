@@ -1,4 +1,4 @@
-function [ ans_aggravate, ans_alleviate, ans_comparison, age, canceled ] = get_symptoms_gui( aggravating, alleviating, comparison )
+function [ ans_aggravate, ans_alleviate, ans_comparison, age, cancelled ] = get_symptoms_gui( aggravating, alleviating, comparison )
 
 %% initialise
 ans_aggravate = [];
@@ -20,9 +20,9 @@ dlgformat.WindowStyle = 'non-modal';
 %% Identify the age of the patient
 x = 1;
 while x == 1
-    [age, canceled] = inputsdlg('Please enter your age:', [], [], [], options);
+    [age, cancelled] = inputsdlg('Please enter your age:', [], [], [], options);
     age = str2double(age{1});
-    if canceled == 1
+    if cancelled == 1
         disp('session ended by user')
         out = datetime('now');
         disp(out)
@@ -36,8 +36,8 @@ while x == 1
 end
 
 %% Get answers to questions about causes of aggravation
-[ans_aggravate, canceled]  = inputsdlg(aggravating(:,1), [], aggravating(:,3),[], options); %open checkbox UI
-if canceled == 1
+[ans_aggravate, cancelled]  = inputsdlg(aggravating(:,1), [], aggravating(:,3),[], options); %open checkbox UI
+if cancelled == 1
     disp('session ended by user')
     out = datetime('now');
     disp(out)
@@ -49,8 +49,8 @@ ans_aggravate = cell2mat(ans_aggravate);
 %% get answers to questions about alleviateing symptoms
 x = 1;
 while x == 1
-    [ans_alleviate, canceled]  = inputsdlg(alleviating(:,1), [], alleviating(:,3), [], options); %open checkbox UI
-    if canceled == 1
+    [ans_alleviate, cancelled]  = inputsdlg(alleviating(:,1), [], alleviating(:,3), [], options); %open checkbox UI
+    if cancelled == 1
         disp('session ended by user')
         out = datetime('now');
         disp(out)
@@ -84,8 +84,8 @@ end
 %% Get answers to questions about comparisons
 x = 1;
 while x == 1
-    [ans_comparison, canceled]  = inputsdlg(comparison(:,1), [], comparison(:,3), [], options); %open checkbox UI
-    if canceled == 1
+    [ans_comparison, cancelled]  = inputsdlg(comparison(:,1), [], comparison(:,3), [], options); %open checkbox UI
+    if cancelled == 1
         disp('session ended by user')
         out = datetime('now');
         disp(out)

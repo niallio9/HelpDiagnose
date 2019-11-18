@@ -1,4 +1,7 @@
-function [ ans_warning, canceled ] = warning_signs_gui()
+function [ ans_warning, cancelled ] = warning_signs_gui()
+
+%% initialise
+cancelled = 0;
 
 %% some dialogue box options
 dlgformat.Interpreter = 'tex';
@@ -14,7 +17,7 @@ if strcmp(ans_warning{1}, 'Cancel')
     disp('session ended by user')
     out = datetime('now');
     disp(out)
-    canceled = 1;
+    cancelled = 1;
     return
 end
 %Disease issue
@@ -23,7 +26,7 @@ if strcmp(ans_warning{2}, 'Cancel')
     disp('session ended by user')
     out = datetime('now');
     disp(out)
-    canceled = 1;
+    cancelled = 1;
     return
 end
 %Break/fracture
@@ -32,7 +35,7 @@ if strcmp(ans_warning{3}, 'Cancel')
     disp('session ended by user')
     out = datetime('now');
     disp(out)
-    canceled = 1;
+    cancelled = 1;
     return
 end
 %Osteoporosis
@@ -41,7 +44,7 @@ if strcmp(ans_warning{4}, 'Cancel')
     disp('session ended by user')
     out = datetime('now');
     disp(out)
-    canceled = 1;
+    cancelled = 1;
     return
 end
 %Really bad
@@ -50,7 +53,7 @@ if strcmp(ans_warning{5}, 'Cancel')
     disp('session ended by user')
     out = datetime('now');
     disp(out)
-    canceled = 1;
+    cancelled = 1;
     return
 end
 %Cancer
@@ -59,7 +62,7 @@ if strcmp(ans_warning{6}, 'Cancel')
     disp('session ended by user')
     out = datetime('now');
     disp(out)
-    canceled = 1;
+    cancelled = 1;
     return
 end
 warning on

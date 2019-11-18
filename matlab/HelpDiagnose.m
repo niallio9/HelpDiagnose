@@ -39,16 +39,16 @@ load('Comparison_symptoms.mat'); %Load the information about the activities give
 %load('Warnings.mat'); % Load the information about the warning signs given by Dr. Awan (warning)
 
 %% Run the user interfaces
-[ans_aggravate, ans_alleviate, ans_comparison, age, canceled ] = get_symptoms_gui( aggravating, alleviating, comparison); %#ok<NODEF>
-if canceled == 1
+[ans_aggravate, ans_alleviate, ans_comparison, age, cancelled ] = get_symptoms_gui( aggravating, alleviating, comparison); %#ok<NODEF>
+if cancelled == 1
     return
 end
-[ans_warning, canceled] = warning_signs_gui();
-if canceled == 1
+[ans_warning, cancelled] = warning_signs_gui();
+if cancelled == 1
     return
 end
 
-%% clean and count the data
+%% clean up a little
 ans_aggravate = ans_aggravate(2:end);
 laggravate = length(ans_aggravate);
 aggravating = aggravating(2:end, :);
@@ -61,55 +61,54 @@ comparison = comparison(2:end, :);
 
 new_patient_data = double([ans_aggravate', ans_alleviate', ans_comparison']);
 
-%% Assess the results and come up with a diagnosis. These are displayed on the screen.
-
+%% Assess the results and come up with a diagnosis. These are displayed on the screen and saved to a file.
 fid = fopen(fileout,'w');
 try
     fprintf(fid, '********************************RESULTS*******************************************');
     switch model_type
         case 'bayes'
             load('model_nb')
-            fprintf(fid, '\n\tDecision model: Naive Bayes');
-            [diagnosis, ypost, ycost] = predict(Mdl, new_patient_data);
+            fprintf(fid, '\nDecision model: Naive Bayes');
+            [diagnosis, ypost, ycost] = predict(Mdl, new_patient_data); %#ok<ASGLU>
             diagnosis = diagnosis{1};
-            fprintf(fid, '\n\tConsidering your information, it is most likely that you have %s-biased back pain', diagnosis);
+            fprintf(fid, '\nConsidering your information, it is most likely that you have %s-biased back pain\n', diagnosis);
             
         case 'forest'
             load('model_rf')
-            fprintf(fid, '\n\tDecision model: Random Forest');
-            [diagnosis, scores, stdevs]= predict(Mdl, [new_patient_data, age]);
+            fprintf(fid, '\nDecision model: Random Forest');
+            [diagnosis, scores, stdevs]= predict(Mdl, [new_patient_data, age]); %#ok<ASGLU>
             diagnosis = diagnosis{1};
-            fprintf(fid, '\n\tConsidering your information, it is most likely that you have %s-biased back pain', diagnosis);
+            fprintf(fid, '\nConsidering your information, it is most likely that you have %s-biased back pain\n', diagnosis);
             
         case 'old_school'
-            fprintf(fid, '\n\tDecision model: Old-School');
+            fprintf(fid, '\nDecision model: Old-School');
             [diagnosis, text_out] = model_oldschool( age, aggravating, alleviating, comparison, ans_aggravate, ans_alleviate, ans_comparison );
             fprintf(fid, text_out);
     end
     
     %% Warnings
     if strcmp(ans_warning{1}, 'Yes') == 1
-        fprintf(fid, '\n\tVERY IMPORTANT: You answered that your symptoms come on sooner if you walk faster.\n\tThis could be indicative of a vascular condition/issue with blood supply\n');
+        fprintf(fid, '\nVERY IMPORTANT: You answered that your symptoms come on sooner if you walk faster.\nThis could be indicative of a vascular condition/issue with blood supply\n');
         %     disp(warnout)
     end
     if strcmp(ans_warning{2}, 'Yes') == 1
-        fprintf(fid, '\n\tVERY IMPORTANT: You answered that you suffer ongoing Fevers/Night sweats/Chills/Unexplained weight loss.\n\tYour pain may be symptomatic of a serious underlying condition\n');
+        fprintf(fid, '\nVERY IMPORTANT: You answered that you suffer ongoing Fevers/Night sweats/Chills/Unexplained weight loss.\nYour pain may be symptomatic of a serious underlying condition\n');
         %     disp(warnout)
     end
     if strcmp(ans_warning{3}, 'Yes') == 1
-        fprintf(fid, '\n\tVERY IMPORTANT: You answered that your symptoms came on after a significant fall/trauma.\n\tThis could mean that you have a fractured or broken bone\n');
+        fprintf(fid, '\nVERY IMPORTANT: You answered that your symptoms came on after a significant fall/trauma.\nThis could mean that you have a fractured or broken bone\n');
         %     disp(warnout)
     end
     if strcmp(ans_warning{4}, 'Yes') == 1 && strcmp(diagnosis, 'flexion')
-        fprintf(fid, '\n\tVERY IMPORTANT: You answered that you have a history of osteoporosis.\n\tIn combination with flexion biased symptoms, this could indicate a compression fracture of the spine\n');
+        fprintf(fid, '\nVERY IMPORTANT: You answered that you have a history of osteoporosis.\nIn combination with flexion biased symptoms, this could indicate a compression fracture of the spine\n');
         %     disp(warnout)
     end
     if strcmp(ans_warning{5}, 'Yes') == 1
-        fprintf(fid, '\n\tVERY IMPORTANT: You answered that you have significant leakage of bladder/bowel function.\n\tIn the context of associated low back pain, this could indicate spinal cord compression\n');
+        fprintf(fid, '\nVERY IMPORTANT: You answered that you have significant leakage of bladder/bowel function.\nIn the context of associated low back pain, this could indicate spinal cord compression\n');
         %     disp(warnout)
     end
     if strcmp(ans_warning{6}, 'Yes') == 1
-        fprintf(fid, '\n\tVERY IMPORTANT: You answered that you have a history of prior cancer.\n\tYou may require screening for possible cancer of the bones\n');
+        fprintf(fid, '\nVERY IMPORTANT: You answered that you have a history of prior cancer.\nYou may require screening for possible cancer of the bones\n');
         %     disp(warnout)
     end
     % fprintf(fid, '\n\n\t***** See the file "%s" for more detailed information on answered questions *****\n\n',fileout);
@@ -150,7 +149,7 @@ try
     end
     fclose(fid);
     type(fileout)
-    fprintf('\n\n\t***** This information has been saved in "%s" *****\n\n', fileout);
+    fprintf('\n\n***** This information has been saved in "%s" *****\n\n', fileout);
 catch 
     fclose(fid);
 end

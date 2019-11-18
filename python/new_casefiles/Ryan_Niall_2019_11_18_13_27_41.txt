@@ -1,0 +1,12 @@
+First Name: Niall
+Last Name: Ryan
+Age: 12
+AGGRAVATING SYMPTOMS:sitting/driving
+standing
+lifting
+ALLEVIATING SYMPTOMS:bending forward
+lying down
+using a grocery cart
+COMPARISON SYMPTOMS:sitting causes more pain than standing
+walking casues more pain than standing
+standing causes more pain than walking
